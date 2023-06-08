@@ -1,0 +1,14 @@
+#!/bin/bash
+# Generate two random numbers between 1 and 100
+number1=$((RANDOM % 100 + 1))
+number2=$((RANDOM % 100 + 1))
+
+# Calculate square roots
+sqrt1=$(echo "scale=2; sqrt($number1)" | bc)
+sqrt2=$(echo "scale=2; sqrt($number2)" | bc)
+
+# Calculate the sum of the square roots
+sum=$(echo "$sqrt1 + $sqrt2" | bc)
+
+# Print our answers
+echo -e "The first random number generated is $number1\nThe square root is $sqrt1\nThe second random number generated is $number2\nThe square root is $sqrt2\nThe sum of their square roots is $sum"
