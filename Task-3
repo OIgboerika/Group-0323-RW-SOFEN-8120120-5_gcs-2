@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Type a phrase"
+read phrase
+
+wordcount=$(echo -n $phrase | wc -w)
+whitespaces=$(echo -n "$phrase" | sed 's/[^[:space:]]//g' | wc -c)
+
+echo -e "The number of words is $wordcount\nThe number of white spaces is $whitespaces"
+
