@@ -1,9 +1,12 @@
 #!/bin/bash
+# Asks the user for input 
 echo "Type a phrase"
 read phrase
 
+# Counts the number of words and white spaces in the phrase
 wordcount=$(echo -n $phrase | wc -w)
 whitespaces=$(echo -n "$phrase" | sed 's/[^[:space:]]//g' | wc -c)
 
+# Prints the resulting number of words and white spaces
 echo -e "The number of words is $wordcount\nThe number of white spaces is $whitespaces"
 
